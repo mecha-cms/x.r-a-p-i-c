@@ -2,7 +2,7 @@
 title: RAPIC – Random Ad Position in Content
 description: Automatically places your ads code randomly within the page content.
 author: Taufik Nurrohman
-version: 2.0.0
+version: 2.0.1
 ...
 
 This plugin will automatically insert your ad code into the page content with random position between the existing paragraphs.
