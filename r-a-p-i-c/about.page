@@ -2,6 +2,7 @@
 title: RAPIC – Random Ad Position in Content
 description: Automatically places your ads code randomly within the page content.
 author: Taufik Nurrohman
+type: Markdown
 version: 2.0.1
 ...
 
