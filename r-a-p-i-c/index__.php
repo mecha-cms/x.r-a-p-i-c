@@ -1,6 +1,6 @@
 <?php
 
-function fn_rapic($content, $lot) {
+function fn_rapic_replace($content, $lot) {
     if (isset($lot['rapic']) && !$lot['rapic']) {
         return $content;
     }
@@ -11,4 +11,4 @@ function fn_rapic($content, $lot) {
     return str_replace([X . '</p>', X], "", implode('</p>', $p));
 }
 
-Hook::set('page.content', 'fn_rapic');
+Hook::set('page.content', 'fn_rapic_replace', 3);
