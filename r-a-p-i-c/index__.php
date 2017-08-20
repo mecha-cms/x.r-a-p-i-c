@@ -4,7 +4,7 @@ ob_start();
 include __DIR__ . DS . 'lot' . DS . 'worker' . DS . 'content.php';
 Lot::set('r_a_p_i_c', ob_get_clean());
 
-function fn_rapic_replace($content, $lot) {
+function fn_rapic($content, $lot) {
     if (isset($lot['rapic']) && !$lot['rapic']) {
         return $content;
     }
@@ -16,4 +16,4 @@ function fn_rapic_replace($content, $lot) {
     return str_replace([X . '</p>', X], "", implode('</p>', $p));
 }
 
-Hook::set('page.content', 'fn_rapic_replace', 3);
+Hook::set('page.content', 'fn_rapic', 3);
