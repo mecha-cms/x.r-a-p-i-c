@@ -1,1 +1,1 @@
-<p>Your ad code goes here&hellip;</p>
+<p style="background:#ff0;color:#000;">Replace this HTML code with your <em>ad</em> code.</p>
