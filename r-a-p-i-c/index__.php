@@ -5,7 +5,7 @@ include __DIR__ . DS . 'lot' . DS . 'worker' . DS . 'content.php';
 Lot::set('r_a_p_i_c', ob_get_clean(), __DIR__);
 
 function fn_rapic($content, $lot = [], $that = null) {
-    if (isset($that->rapic) && !$that->rapic) {
+    if (isset($lot['rapic']) && !$lot['rapic'] || isset($that->rapic) && !$that->rapic) {
         return $content;
     }
     if (!isset($lot['path']) || strpos($lot['path'], PAGE) !== 0) {
