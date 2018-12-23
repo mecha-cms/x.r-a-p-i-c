@@ -1,19 +1,23 @@
-<?php
+<?php namespace fn;
 
 ob_start();
-include __DIR__ . DS . 'lot' . DS . 'worker' . DS . 'content.php';
-Lot::set('r_a_p_i_c', ob_get_clean(), __DIR__);
 
-function fn_rapic($content, $lot = [], $that = null) {
-    if (isset($lot['rapic']) && !$lot['rapic'] || isset($that->rapic) && !$that->rapic) {
+function rapic($content, array $lot = []) {
+    if ($this->rapic !== null && !$this->rapic) {
+        return $content;
+    } else if (!$this->path || strpos($this->path, PAGE . DS) !== 0) {
         return $content;
     }
-    if (!isset($lot['path']) || strpos($lot['path'], PAGE) !== 0) {
-        return $content;
-    }
-    $p = explode('</p>', $content);
-    array_splice($p, array_rand($p), 0, Lot::get('r_a_p_i_c', "", __DIR__) . X);
-    return str_replace([X . '</p>', X], "", implode('</p>', $p));
+    $ad = "";
+    \fn(function() use(&$ad) {
+        ob_start();
+        extract(\Lot::get(), EXTR_SKIP);
+        include __DIR__ . DS . 'lot' . DS . 'worker' . DS . 'content.php';
+        $ad = ob_get_clean();
+    }, [], $this);
+    $parts = explode('</p>', $content);
+    array_splice($parts, array_rand($parts), 0, $ad . X);
+    return str_replace([X . '</p>', X], "", implode('</p>', $parts));
 }
 
-Hook::set('page.content', 'fn_rapic', 3);
+\Hook::set('page.content', __NAMESPACE__ . "\\rapic", 3);

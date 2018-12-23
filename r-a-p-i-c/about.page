@@ -3,16 +3,16 @@ title: RAPIC – Random Ad Position in Content
 description: Automatically places your ads code randomly within the page content.
 author: Taufik Nurrohman
 type: Markdown
-version: 2.2.0
+version: 2.3.0
 ...
 
 This plugin will automatically insert your ad code into the page content with random position between the existing paragraphs.
 
 ### Usage
 
-Open `lot\extend\plugin\lot\worker\r-a-p-i-c\lot\worker\content.php` then put your ad code there.
+Open `lot\worker\content.php` then put your AD code there.
 
-To disable the automatic ad placement on certain page, add a `rapic` header property with a value that can be evaluated to `false`:
+To disable the automatic AD placement on certain page, add a `rapic` property with a value that can be evaluated to `false`:
 
 ~~~ .yaml
 ---

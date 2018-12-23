@@ -1,1 +1,1 @@
-<p style="background:#ff0;color:#000;">Replace this HTML code with your <em>ad</em> code.</p>
+<p><mark>Replace this content with your AD code.</mark></p>
