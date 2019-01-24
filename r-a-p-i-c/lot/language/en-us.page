@@ -1,0 +1,6 @@
+---
+type: YAML
+...
+
+o_page_state:
+  r-a-p-i-c: ["Hide advertisements in page content?", 0]
