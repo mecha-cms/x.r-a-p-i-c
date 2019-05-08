@@ -1,4 +1,4 @@
-<?php namespace fn;
+<?php namespace _;
 
 function r_a_p_i_c($content, array $lot = []) {
     $hash = X . ($path = $this->path) . X;
@@ -13,9 +13,9 @@ function r_a_p_i_c($content, array $lot = []) {
         return $content;
     }
     $adv = "";
-    \fn(function() use(&$adv) {
+    \fire(function() use(&$adv) {
         \ob_start();
-        extract(\Lot::get(), \EXTR_SKIP);
+        extract($GLOBALS, \EXTR_SKIP);
         include __DIR__ . DS . 'lot' . DS . 'worker' . DS . 'content.php';
         $adv = \ob_get_clean();
     }, [], $this, \Page::class);
@@ -25,3 +25,4 @@ function r_a_p_i_c($content, array $lot = []) {
 }
 
 \Hook::set('page.content', __NAMESPACE__ . "\\r_a_p_i_c", 3);
+\Language::set('o:page-state.r-a-p-i-c', ['Hide advertisements in page content?', 0]);
