@@ -1,7 +1,7 @@
 <?php namespace _;
 
 function r_a_p_i_c($content, array $lot = []) {
-    $hash = X . ($path = $this->path) . X;
+    $hash = P . ($path = $this->path) . P;
     if (!$path || \strpos($path, PAGE . DS) !== 0) {
         return $content;
     }
@@ -20,8 +20,8 @@ function r_a_p_i_c($content, array $lot = []) {
         $adv = \ob_get_clean();
     }, [], $this, \Page::class);
     $parts = \explode('</p>', $content);
-    \array_splice($parts, \array_rand($parts), 0, $adv . X);
-    return \str_replace([X . '</p>', X], "", \implode('</p>', $parts));
+    \array_splice($parts, \array_rand($parts), 0, $adv . P);
+    return \str_replace([P . '</p>', P], "", \implode('</p>', $parts));
 }
 
 \Hook::set('page.content', __NAMESPACE__ . "\\r_a_p_i_c", 3);
