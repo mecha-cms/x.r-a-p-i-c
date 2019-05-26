@@ -16,9 +16,9 @@ function r_a_p_i_c($content, array $lot = []) {
     \fire(function() use(&$adv) {
         \ob_start();
         extract($GLOBALS, \EXTR_SKIP);
-        include __DIR__ . DS . 'lot' . DS . 'worker' . DS . 'content.php';
+        include __DIR__ . DS . 'engine' . DS . 'r' . DS . 'content' . DS . 'ad.php';
         $adv = \ob_get_clean();
-    }, [], $this, \Page::class);
+    }, [], $this);
     $parts = \explode('</p>', $content);
     \array_splice($parts, \array_rand($parts), 0, $adv . P);
     return \str_replace([P . '</p>', P], "", \implode('</p>', $parts));
