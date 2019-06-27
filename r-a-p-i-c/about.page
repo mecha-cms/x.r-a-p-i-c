@@ -10,7 +10,7 @@ This plugin will automatically insert your advertisements code into the page con
 
 ### Usage
 
-Open `.\lot\extend\plugin\lot\r-a-p-i-c\engine\r\content\ad.php` then put your advertisements code there.
+Open `.\lot\x\plugin\lot\r-a-p-i-c\engine\r\content\ad.php` then put your advertisements code there.
 
 To disable the automatic advertisements placement on certain page, add a `r-a-p-i-c` property within your page’s `state` property with a value that can be evaluated to `false`:
 
