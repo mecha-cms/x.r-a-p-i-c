@@ -1,26 +1,26 @@
-<?php namespace _;
+<?php namespace _\lot\x;
 
-function r_a_p_i_c($content, array $lot = []) {
+function r_a_p_i_c($content) {
     $hash = P . ($path = $this->path) . P;
     if (!$path || \strpos($path, PAGE . DS) !== 0) {
         return $content;
     }
-    $test = $this->get('state.r-a-p-i-c', $hash);
+    $test = $this->get('state.r-a-p-i-c') ?? $hash;
     if ($test !== $hash && !$test) {
         return $content;
     }
-    if (\Config::get('is.pages')) {
+    if (\Config::is('pages')) {
         return $content;
     }
-    $adv = "";
-    \fire(function() use(&$adv) {
+    $ads = "";
+    \fire(function() use(&$ads) {
         \ob_start();
         extract($GLOBALS, \EXTR_SKIP);
-        include __DIR__ . DS . 'engine' . DS . 'r' . DS . 'content' . DS . 'ad.php';
-        $adv = \ob_get_clean();
+        include __DIR__ . DS . 'engine' . DS . 'r' . DS . 'content' . DS . 'ads.php';
+        $ads = \ob_get_clean();
     }, [], $this);
     $parts = \explode('</p>', $content);
-    \array_splice($parts, \array_rand($parts), 0, $adv . P);
+    \array_splice($parts, \array_rand($parts), 0, $ads . P);
     return \str_replace([P . '</p>', P], "", \implode('</p>', $parts));
 }
 

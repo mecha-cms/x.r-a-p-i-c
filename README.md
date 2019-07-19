@@ -1,20 +1,4 @@
 RAPIC – Random Ad Position in Content for Mecha
 ===============================================
 
-This plugin will automatically insert your ad code into the page content with random position between the existing paragraphs.
-
-### Usage
-
-Open `lot\extend\plugin\lot\worker\r-a-p-i-c\lot\worker\content.php` then put your ad code there.
-
-To disable the automatic ad placement on certain page, add a `rapic` header property with a value that can be evaluated to `false`:
-
-~~~ .yaml
----
-title: Page Title
-description: Page description.
-author: Taufik Nurrohman
-type: HTML
-rapic: false
-...
-~~~
+> This extension will automatically insert your ads code into the page content with random position between the existing paragraphs.
