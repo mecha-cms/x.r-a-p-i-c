@@ -1,4 +1,9 @@
-RAPIC – Random Ad Position in Content for Mecha
-===============================================
+RAPIC (Random Advertisements Position in Content) Extension for Mecha
+=====================================================================
 
-> This extension will automatically insert your ads code into the page content with random position between the existing paragraphs.
+Release Notes
+-------------
+
+### 2.4.3
+
+ - Upgraded compatibility for version 2.2.0.

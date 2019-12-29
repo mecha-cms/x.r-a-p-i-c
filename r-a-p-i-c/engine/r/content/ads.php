@@ -1,1 +1,0 @@
-<p><mark>Replace this content with your ads code.</mark></p>
