@@ -1,4 +1,4 @@
-<?php namespace _\lot\x;
+<?php namespace x;
 
 function r_a_p_i_c($content) {
     $hash = \P . ($path = $this->path) . \P;

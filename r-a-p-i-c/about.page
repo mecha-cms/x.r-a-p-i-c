@@ -3,7 +3,7 @@ title: Random Advertisements Position in Content
 description: Insert advertisements code randomly within the page content.
 author: Taufik Nurrohman
 type: Markdown
-version: 2.4.3
+version: 2.4.4
 ...
 
 Insert advertisements code in random position between the existing paragraphs in the page content.
