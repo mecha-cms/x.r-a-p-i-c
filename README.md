@@ -1,6 +1,12 @@
 RAPIC (Random Advertisements Position in Content) Extension for [Mecha](https://github.com/mecha-cms/mecha)
 ===========================================================================================================
 
+![Code Size](https://img.shields.io/github/languages/code-size/mecha-cms/x.r-a-p-i-c?color=%23444&style=for-the-badge)
+
+Insert advertisements code in random position between the existing paragraphs in the page content.
+
+---
+
 Release Notes
 -------------
 
